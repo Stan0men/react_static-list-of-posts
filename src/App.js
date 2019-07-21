@@ -1,29 +1,46 @@
 import React from 'react';
 
 import './App.css';
-
-import posts from './api/posts';
-import comments from './api/comments';
-import users from './api/users';
+import PostList from './PostList';
+// import posts from './api/posts';
+// import comments from './api/comments';
+// import users from './api/users';
 
 const App = () => (
   <div className="App">
     <h1>Static list of posts</h1>
 
     <p>
-      <span>posts: </span>
-      {posts.length}
+      <span>Post list</span>
+      <PostList />
     </p>
 
     <p>
-      <span>comments: </span>
-      {comments.length}
+      <span>Comments list </span>
+      <CommentList />
     </p>
 
     <p>
-      <span>Users: </span>
-      {users.length}
+      <span>User </span>
+      <User />
     </p>
+  </div>
+);
+
+const CommentList = () => (
+  <div>
+    <Comment />
+  </div>
+);
+const Comment = () => (
+  <div>
+    Comment
+  </div>
+);
+
+const User = () => (
+  <div>
+    user info
   </div>
 );
 
